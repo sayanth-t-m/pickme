@@ -1,0 +1,57 @@
+body {
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+    background: radial-gradient(circle, rgb(20, 1, 66) 0%, rgb(8, 4, 17) 50%, rgb(29, 9, 77) 100%);
+    color: #b30b89;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#pickup-line {
+    font-size: 1.8rem;
+    margin: 20px 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#pickup-line.show {
+    opacity: 1;
+}
+
+button {
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    animation: beat 0.5s infinite alternate;
+}
+
+button:before {
+    content: '\2764';
+    font-size: 5rem;
+    color: #df0fbcc2;
+    transition: color 0.8s ease;
+}
+
+button:hover:before {
+    color: #ff0000;
+}
+
+@keyframes beat {
+    to {
+        transform: scale(1.2);
+    }
+}
