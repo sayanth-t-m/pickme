@@ -1,12 +1,13 @@
 body {
     font-family: 'Arial Rounded MT Bold', sans-serif;
-    background: radial-gradient(circle, rgb(20, 1, 66) 0%, rgb(8, 4, 17) 50%, rgb(29, 9, 77) 100%);
+    background: radial-gradient(circle, rgba(54, 0, 51, 0.9) 0%, rgba(0, 0, 51, 0.9) 50%, rgba(0, 0, 102, 0.9) 100%);
     color: #b30b89;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden; /* Prevents background overflow */
 }
 
 .container {
@@ -16,6 +17,7 @@ body {
 h1 {
     font-size: 3rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #fff; /* Change title color to white */
 }
 
 #pickup-line {
@@ -23,6 +25,7 @@ h1 {
     margin: 20px 0;
     opacity: 0;
     transition: opacity 1.2s ease;
+    color: #fff; /* Change pickup line color to white */
 }
 
 #pickup-line.show {
@@ -54,4 +57,22 @@ button:hover:before {
     to {
         transform: scale(1.2);
     }
+}
+
+/* Additional styles for enhanced design */
+body {
+    background: linear-gradient(135deg, rgba(54, 0, 51, 0.9) 0%, rgba(0, 0, 51, 0.9) 50%, rgba(0, 0, 102, 0.9) 100%); /* Dark gradient background */
+}
+
+.container {
+    border: 2px solid #b700ff; /* Add a violet border around the container */
+    border-radius: 10px; /* Add border radius for a softer look */
+    padding: 20px; /* Add padding for spacing */
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.9) 100%), url('path/to/background-image.jpg'); /* Semi-transparent gradient background with background image */
+    background-size: cover;
+}
+
+
+button:before {
+    color: #b30b89; /* Change heart color to pink */
 }
