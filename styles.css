@@ -1,31 +1,41 @@
 body {
-    font-family: 'Arial Rounded MT Bold', sans-serif;
-    background: radial-gradient(circle, rgba(54, 0, 51, 0.9) 0%, rgba(0, 0, 51, 0.9) 50%, rgba(0, 0, 102, 0.9) 100%);
-    color: #b30b89;
+    font-family: 'Arial',
+ sans-serif; /* Simpler font */
+    background-color: #f4f4f4; /* Light, neutral background */
+    color: #333; /* Dark gray text for better contrast */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-
+body {
+    /* ... other styles ... */
+    align-items: center;  
     height: 100vh;
     margin: 0;
-    overflow: hidden; /* Prevents background overflow */
+    overflow: hidden;
 }
+
 
 .container {
     text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #fff; /* White container background */
 }
 
 h1 {
-    font-size: 3rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    color: #fff; /* Change title color to white */
+    font-size: 2.5rem; /* Slightly smaller title */
+    margin-bottom: 15px; 
+    color: #333; /* Dark gray title */
+    text-shadow: none; /* Remove text shadow */
 }
 
 #pickup-line {
-    font-size: 1.8rem;
-    margin: 20px 0;
+    font-size: 1.6rem;
+    margin: 15px 0;
     opacity: 0;
-    transition: opacity 1.2s ease;
-    color: #fff; /* Change pickup line color to white */
+    transition: opacity 0.8s ease-in-out; /* Smoother transition */
+    color: #555; /* Slightly lighter gray for pickup line */
 }
 
 #pickup-line.show {
@@ -33,46 +43,30 @@ h1 {
 }
 
 button {
-    padding: 0;
-    width: 50px;
-    height: 50px;
-    background-color: transparent;
+    padding: 10px 20px; /* Add some padding */
+    background-color: #4CAF50; /* Green button */
+    color: white;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-    animation: beat 0.5s infinite alternate;
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
 }
 
 button:before {
-    content: '\2764';
-    font-size: 5rem;
-    color: #df0fbcc2;
-    transition: color 0.8s ease;
-}
-
-button:hover:before {
-    color: #ff0000;
+    content: none; /* Remove the heart icon */
 }
 
 @keyframes beat {
     to {
-        transform: scale(1.2);
+        transform: scale(1.05); /* More subtle scale animation */
     }
 }
 
-/* Additional styles for enhanced design */
-body {
-    background: linear-gradient(135deg, rgba(54, 0, 51, 0.9) 0%, rgba(0, 0, 51, 0.9) 50%, rgba(0, 0, 102, 0.9) 100%); /* Dark gradient background */
-}
-
-.container {
-    border: 2px solid #b700ff; /* Add a violet border around the container */
-    border-radius: 10px; /* Add border radius for a softer look */
-    padding: 20px; /* Add padding for spacing */
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.9) 100%), url('path/to/background-image.jpg'); /* Semi-transparent gradient background with background image */
-    background-size: cover;
-}
-
-
-button:before {
-    color: #b30b89; /* Change heart color to pink */
+button:hover {
+    animation: beat 0.5s infinite alternate; /* Animation on hover */
 }
