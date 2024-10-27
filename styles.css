@@ -1,41 +1,41 @@
 body {
-    font-family: 'Arial',
- sans-serif; /* Simpler font */
-    background-color: #f4f4f4; /* Light, neutral background */
-    color: #333; /* Dark gray text for better contrast */
+    font-family: 'Arial', sans-serif; /* Corrected font-family property */
+    background-color: #000; /* Black background */
+    color: #f0f0f0; /* Light text for contrast */
     display: flex;
     justify-content: center;
-    align-
-body {
-    /* ... other styles ... */
-    align-items: center;  
+    align-items: center; /* Added semicolon */
     height: 100vh;
     margin: 0;
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 
 .container {
     text-align: center;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    background-color: #fff; /* White container background */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3); /* Red glow shadow */ 
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    backdrop-filter: blur(10px); /* Optional: Add a blur effect */
 }
 
 h1 {
-    font-size: 2.5rem; /* Slightly smaller title */
-    margin-bottom: 15px; 
-    color: #333; /* Dark gray title */
-    text-shadow: none; /* Remove text shadow */
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #e0e0e0; /* Slightly off-white title */
+    text-shadow: 0 0 5px #ff0000; /* Red glow effect */
+    font-family: 'Great Vibes', cursive; /* Romantic font (optional) */ 
 }
 
 #pickup-line {
-    font-size: 1.6rem;
-    margin: 15px 0;
+    font-size: 1.8rem;
+    margin: 20px 0;
     opacity: 0;
-    transition: opacity 0.8s ease-in-out; /* Smoother transition */
-    color: #555; /* Slightly lighter gray for pickup line */
+    transition: opacity 1s ease-in-out;
+    color: #ff69b4; /* Hot pink color */
+    text-shadow: 0 0 3px #ff0000; /* Red glow effect */
+    font-family: 'Great Vibes', cursive; /* Romantic font (optional) */ 
 }
 
 #pickup-line.show {
@@ -43,31 +43,34 @@ h1 {
 }
 
 button {
-    padding: 10px 20px; /* Add some padding */
-    background-color: #4CAF50; /* Green button */
+    padding: 12px 24px;
+    background-color: #ff69b4; /* Hot pink button */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Transition for hover effect */
-    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 5px rgba(255, 0, 0, 0.3); /* Red glow shadow */
+    font-family: 'Great Vibes', cursive; /* Romantic font (optional) */
 }
 
 button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #ff1493; /* Darker pink on hover */
+    transform: scale(1.05);
 }
 
 button:before {
-    content: none; /* Remove the heart icon */
+    content: none;
 }
 
 @keyframes beat {
     to {
-        transform: scale(1.05); /* More subtle scale animation */
+        transform: scale(1.1);
+        box-shadow: 0 4px 10px rgba(255, 0, 0, 0.6); /* More intense red glow */
     }
 }
 
 button:hover {
-    animation: beat 0.5s infinite alternate; /* Animation on hover */
-}
+    animation: beat 0.5s infinite alternate;
 }
