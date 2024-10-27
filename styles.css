@@ -70,3 +70,4 @@ button:before {
 button:hover {
     animation: beat 0.5s infinite alternate; /* Animation on hover */
 }
+}
